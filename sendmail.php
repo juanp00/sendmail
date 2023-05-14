@@ -4,8 +4,9 @@ require 'PHPMailer/PHPMailerAutoload.php';
 
 $name = $_POST['name'];
 $email = $_POST['email'];
+$assunto = $_POST['assunto'];
 $message = $_POST['message'];
-
+$mensagem_formatada = "Nome: " . $name . "<br>E-mail: " . $email . "<br>Assunto: " . $assunto . "<br>Mensagem: " . $message;
 $mail = new PHPMailer(true);
 
 try {
@@ -24,12 +25,13 @@ try {
     $mail->addAddress($email);
     $mail->Subject = 'Contato do Site Juan Dev';
     $mail->isHTML(true);
-    $mail->Body = $message;
+    $mail->Body = $mensagem_formatada;
 
     // Envia o e-mail
-    
     $mail->send();
+
     echo 'Mensagem enviada com sucesso!';
+    
 } catch (Exception $e) {
     echo 'Não foi possível enviar a mensagem. Erro: ', $mail->ErrorInfo;
 }
