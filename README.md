@@ -28,3 +28,6 @@ Este sistema utiliza a biblioteca PHPMailer para enviar emails. Para utilizá-lo
 - Este sistema foi testado e funciona com servidores SMTP que requerem autenticação e utilizam criptografia SSL ou TLS para conexão.
 - Caso o servidor SMTP de sua preferência não utilize criptografia, deixe a variável `$smtpEncryption` vazia (`''`).
 - Este sistema não foi testado com servidores SMTP que utilizam outros tipos de criptografia para conexão.
+
+
+![Imagem do sistema](https://github.com/juanp00/sendmail/assets/57877908/3a6f1b91-75d7-4297-aee7-7b4b6d1502e8)
