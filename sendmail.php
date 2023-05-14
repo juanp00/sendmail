@@ -12,12 +12,12 @@ $mail = new PHPMailer(true);
 try {
     // Configurações do servidor SMTP
     $mail->isSMTP();
-    $mail->Host = 'smtp.hostinger.com';
+    $mail->Host = 'insira aqui ex: smt.hostinger.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'contato@juandev.com.br'; // substitua pelo seu e-mail
-    $mail->Password = 'Lima3463#'; // substitua pela sua senha
+    $mail->Username = 'insira seu e-mail aqui'; // substitua pelo seu e-mail
+    $mail->Password = 'insira a senha do seu'; // substitua pela sua senha
     $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    $mail->Port = '465'; 
 
     // Configurações do e-mail
     $mail->setFrom($mail->Username, "Juan Dev");
