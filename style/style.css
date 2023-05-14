@@ -37,22 +37,6 @@ body {
     flex-direction: column;
 }
 
-.wrapper-main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.wrapper-contact-info {
-    width: 50%;
-    height: 100%;
-}
-.wrapper-contact-form {
-    width: 50%;
-}
-
 #contact-form div {
     display: flex;
     flex-direction: column;
@@ -63,6 +47,7 @@ body {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #ffffff70;
+    border-radius: 0 !important;
 }
 
 #contact-form div input {

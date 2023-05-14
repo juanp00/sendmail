@@ -14,64 +14,64 @@
 </head>
 <body>
     <div class="container-body">
-        <header class="p-4">
+        <header class="p-5">
             <div>
                 <h1 class="text-center">Send <span style="background-color: #02b9da; padding: 5px 8px; border-radius: 10px;">Mail</span></h1>
             </div>
         </header>
-        <main class="wrapper-main container p-4">
-            <div class="wrapper-contact-info">
-                <h2 class="pb-4">Informações de Contato</h2>
-                <div>
-                    <h5>E-mail</h5>
-                    <p>sendmail@teste.com.br</p>
+        <main class="wrapper-main container p-4 mt-5">
+            <div class="row">
+                <div class="wrapper-contact-info col mb-5">
+                    <h2 class="pb-4">Informações de Contato</h2>
+                    <div>
+                        <h5>E-mail</h5>
+                        <p>sendmail@teste.com.br</p>
+                    </div>
+                    <div>
+                        <h5>Telefone</h5>
+                        <p>(13)99999-9999</p>
+                    </div>
+                    <div class="wrapper-social-icon">
+                        <a href="#"><img src="public/img/instagram.png" alt="Icone do instagram"></a>
+                        <a href="#"><img src="public/img/facebook.png" alt="Icone do Facebook"></a>
+                        <a href="#"><img src="public/img/wpp-icon.png" alt="Icone do Whatsapp"></a>
+                    </div>
                 </div>
-                <div>
-                    <h5>Telefone</h5>
-                    <p>(13)99999-9999</p>
+                <div class="wrapper-contact-form col">
+                    <form id="contact-form" method="POST">
+                        <div>
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nome</label>
+                        </div>
+
+                        <div>
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                        
+                        <div>
+                            <input type="text" id="assunto" name="assunto" required>
+                            <label for="assunto">Assunto</label>
+                        </div>
+
+                        <div>
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Mensagem</label>
+                        </div>
+                        <div>
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+
+                    <div id="loading">
+                        <img src="public/img/loading.gif" width="50px" alt="Carregando...">
+                    </div>
+                    <div id="response">
+                        <p onclick="fecharPopup()">Fechar</p>
+                        <h5 id="msgResponse"></h5>
+                    </div>
                 </div>
-                <div class="wrapper-social-icon">
-                    <a href="#"><img src="public/img/instagram.png" alt="Icone do instagram"></a>
-                    <a href="#"><img src="public/img/facebook.png" alt="Icone do Facebook"></a>
-                    <a href="#"><img src="public/img/wpp-icon.png" alt="Icone do Whatsapp"></a>
-                </div>
-                
             </div>
-            <div class="wrapper-contact-form">
-                <form id="contact-form" method="POST">
-                    <div>
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Nome</label>
-                    </div>
-
-                    <div>
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">E-mail</label>
-                    </div>
-                    
-                    <div>
-                        <input type="text" id="assunto" name="assunto" required>
-                        <label for="assunto">Assunto</label>
-                    </div>
-
-                    <div>
-                        <textarea id="message" name="message" required></textarea>
-                        <label for="message">Mensagem</label>
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
-
-                <div id="loading">
-                    <img src="public/img/loading.gif" width="50px" alt="Carregando...">
-                </div>
-                <div id="response">
-                    <p onclick="fecharPopup()">Fechar</p>
-                    <h5 id="msgResponse"></h5>
-                </div>
-            </div>
-            
         </main>
     </div>
 
@@ -89,7 +89,6 @@
                 var email = $('#email').val();
                 var assunto = $('#assunto').val();
                 var message = $('#message').val();
-
 
                 const divGif = document.getElementById("loading");
                 divGif.style.visibility= "visible";
