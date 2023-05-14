@@ -11,7 +11,7 @@ Este sistema foi desenvolvido em PHP e utiliza a biblioteca PHPMailer para envia
 $smtpHost = 'smtp.example.com'; // endereço do servidor SMTP
 $smtpUsername = 'seu-email@example.com'; // endereço de email usado para autenticação no servidor SMTP
 $smtpPassword = 'sua-senha-de-email'; // senha usada para autenticação no servidor SMTP
-$smtpPort = 587; // porta usada para conexão com o servidor SMTP
+$smtpPort = 587; // porta usada para conexão com o servidor SMTP 587 para tls ou 465 para ssl
 $smtpEncryption = 'tls'; // tipo de criptografia usada na conexão com o servidor SMTP (ssl ou tls)
 ```
 
@@ -22,14 +22,6 @@ $smtpEncryption = 'tls'; // tipo de criptografia usada na conexão com o servido
 ## Dependências
 
 Este sistema utiliza a biblioteca PHPMailer para enviar emails. Para utilizá-lo, é necessário instalar a biblioteca. Você pode instalá-la manualmente ou através de gerenciadores de pacote como o Composer.
-
-Para instalar manualmente, basta baixar a biblioteca em https://github.com/PHPMailer/PHPMailer e incluir o arquivo `PHPMailerAutoload.php` em seu projeto.
-
-Para instalar com o Composer, execute o seguinte comando em seu terminal:
-
-```
-composer require phpmailer/phpmailer
-```
 
 ## Observações
 
